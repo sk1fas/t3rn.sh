@@ -84,7 +84,7 @@ case $choice in
         echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn'" >> $CONFIG_FILE
         cat <<'EOF' >> $CONFIG_FILE
 RPC_ENDPOINTS='{
-    "l2rn": ['https://b2n.rpc.caldera.xyz/http', 'https://b2n-testnet.blockpi.network/v1/rpc/public'],
+    "l2rn": ["https://b2n.rpc.caldera.xyz/http", "https://b2n-testnet.blockpi.network/v1/rpc/public"],
     "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
     "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
@@ -174,7 +174,7 @@ EOT"
         echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn'" >> $CONFIG_FILE
         cat <<'EOF' >> $CONFIG_FILE
 RPC_ENDPOINTS='{
-    "l2rn": ['https://b2n.rpc.caldera.xyz/http', 'https://b2n-testnet.blockpi.network/v1/rpc/public'],
+    "l2rn": ["https://b2n.rpc.caldera.xyz/http", "https://b2n-testnet.blockpi.network/v1/rpc/public"],
     "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
     "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
