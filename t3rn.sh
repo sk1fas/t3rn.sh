@@ -56,12 +56,12 @@ case $choice in
 
         # Скачиваем бинарник
         #LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
-        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.53.1/executor-linux-v0.53.1.tar.gz"
-        curl -L -o executor-linux-v0.53.1.tar.gz $EXECUTOR_URL
+        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.61.0/executor-linux-v0.61.0.tar.gz"
+        curl -L -o executor-linux-v0.61.0.tar.gz $EXECUTOR_URL
 
         # Извлекаем
-        tar -xzvf executor-linux-v0.53.1.tar.gz
-        rm -rf executor-linux-v0.53.1.tar.gz
+        tar -xzvf executor-linux-v0.61.0.tar.gz
+        rm -rf executor-linux-v0.61.0.tar.gz
 
         # Определяем пользователя и домашнюю директорию
         USERNAME=$(whoami)
@@ -84,7 +84,7 @@ case $choice in
         echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn'" >> $CONFIG_FILE
         cat <<'EOF' >> $CONFIG_FILE
 RPC_ENDPOINTS='{
-    "l2rn": ["https://b2n.rpc.caldera.xyz/http"],
+    "l2rn": ['https://b2n.rpc.caldera.xyz/http', 'https://b2n-testnet.blockpi.network/v1/rpc/public'],
     "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
     "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
@@ -148,10 +148,10 @@ EOT"
 
         # Скачиваем новый бинарник
         #LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
-        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.53.1/executor-linux-v0.53.1.tar.gz"
-        curl -L -o executor-linux-v0.53.1.tar.gz $EXECUTOR_URL
-        tar -xzvf executor-linux-v0.53.1.tar.gz
-        rm -rf executor-linux-v0.53.1.tar.gz
+        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.61.0/executor-linux-v0.61.0.tar.gz"
+        curl -L -o executor-linux-v0.61.0.tar.gz $EXECUTOR_URL
+        tar -xzvf executor-linux-v0.61.0.tar.gz
+        rm -rf executor-linux-v0.61.0.tar.gz
 
         # Определяем пользователя и домашнюю директорию
         USERNAME=$(whoami)
@@ -174,7 +174,7 @@ EOT"
         echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn'" >> $CONFIG_FILE
         cat <<'EOF' >> $CONFIG_FILE
 RPC_ENDPOINTS='{
-    "l2rn": ["https://b2n.rpc.caldera.xyz/http"],
+    "l2rn": ['https://b2n.rpc.caldera.xyz/http', 'https://b2n-testnet.blockpi.network/v1/rpc/public'],
     "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
     "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
