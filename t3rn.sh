@@ -58,10 +58,10 @@ setup_executor_config() {
     echo "EXECUTOR_PROCESS_CLAIMS=true" >> "$CONFIG_FILE"
     echo "PRIVATE_KEY_LOCAL=" >> "$CONFIG_FILE"
     echo "EXECUTOR_MAX_L3_GAS_PRICE=1500" >> "$CONFIG_FILE"
-    echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,unichain-sepolia'" >> "$CONFIG_FILE"
+    echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,unichain-sepolia,blast-sepolia'" >> "$CONFIG_FILE"
 
     if ! grep -q "NETWORKS_DISABLED=" "$CONFIG_FILE"; then
-        echo "NETWORKS_DISABLED='blast-sepolia,monad-testnet,arbitrum,base,optimism,sei-testnet'" >> "$CONFIG_FILE"
+        echo "NETWORKS_DISABLED='monad-testnet,arbitrum,base,optimism,sei-testnet'" >> "$CONFIG_FILE"
     fi
 
     cat <<'EOF' >> "$CONFIG_FILE"
