@@ -80,18 +80,18 @@ case $choice in
         echo "EXECUTOR_PROCESS_ORDERS=true" >> $CONFIG_FILE
         echo "EXECUTOR_PROCESS_CLAIMS=true" >> $CONFIG_FILE
         echo "PRIVATE_KEY_LOCAL=" >> $CONFIG_FILE
-        echo "EXECUTOR_MAX_L3_GAS_PRICE=1500" >> $CONFIG_FILE
+        echo "EXECUTOR_MAX_L3_GAS_PRICE=1000" >> $CONFIG_FILE
         echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,unichain-sepolia'" >> $CONFIG_FILE
         echo "NETWORKS_DISABLED='blast-sepolia,monad-testnet,arbitrum,base,optimism,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
     "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
-    "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
-    "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
-    "blst": ["https://sepolia.blast.io", "https://blast-sepolia.drpc.org"],
+    "arbt": ["https://arbitrum-sepolia-rpc.publicnode.com"],
+    "bast": ["https://sepolia.base.org"],
+    "blst": ["https://blast-sepolia.blockpi.network/v1/rpc/public"],
     "mont": ["https://testnet-rpc.monad.xyz"],
-    "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
-    "unit": ["https://unichain-sepolia.drpc.org", "https://sepolia.unichain.org"]
+    "opst": ["https://optimism-sepolia-rpc.publicnode.com"],
+    "unit": ["https://unichain-sepolia.blockpi.network/v1/rpc/public"]
 }'
 EOF
         if ! grep -q "ENVIRONMENT=testnet" "$HOME/executor/executor/bin/.t3rn"; then
@@ -173,18 +173,18 @@ EOT"
         echo "EXECUTOR_PROCESS_ORDERS=true" >> $CONFIG_FILE
         echo "EXECUTOR_PROCESS_CLAIMS=true" >> $CONFIG_FILE
         echo "PRIVATE_KEY_LOCAL=" >> $CONFIG_FILE
-        echo "EXECUTOR_MAX_L3_GAS_PRICE=1500" >> $CONFIG_FILE
+        echo "EXECUTOR_MAX_L3_GAS_PRICE=1000" >> $CONFIG_FILE
         echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,unichain-sepolia'" >> $CONFIG_FILE
         echo "NETWORKS_DISABLED='blast-sepolia,monad-testnet,arbitrum,base,optimism,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
-    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
-    "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
-    "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.drpc.org"],
-    "blst": ["https://sepolia.blast.io", "https://blast-sepolia.drpc.org"],
+    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public"],
+    "arbt": ["https://arbitrum-sepolia-rpc.publicnode.com"],
+    "bast": ["https://sepolia.base.org"],
+    "blst": ["https://blast-sepolia.blockpi.network/v1/rpc/public"],
     "mont": ["https://testnet-rpc.monad.xyz"],
-    "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia.drpc.org"],
-    "unit": ["https://unichain-sepolia.drpc.org", "https://sepolia.unichain.org"]
+    "opst": ["https://optimism-sepolia-rpc.publicnode.com"],
+    "unit": ["https://unichain-sepolia.blockpi.network/v1/rpc/public"]
 }'
 EOF
 
