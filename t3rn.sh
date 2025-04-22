@@ -81,7 +81,8 @@ case $choice in
         echo "EXECUTOR_PROCESS_CLAIMS=true" >> $CONFIG_FILE
         echo "PRIVATE_KEY_LOCAL=" >> $CONFIG_FILE
         echo "EXECUTOR_MAX_L3_GAS_PRICE=1500" >> $CONFIG_FILE
-        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,blast-sepolia'" >> $CONFIG_FILE
+        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn'" >> $CONFIG_FILE
+        echo "NETWORKS_DISABLED='blast-sepolia,unichain-sepolia,monad-testnet,arbitrum,base,optimism,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
     "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
@@ -173,7 +174,8 @@ EOT"
         echo "EXECUTOR_PROCESS_CLAIMS=true" >> $CONFIG_FILE
         echo "PRIVATE_KEY_LOCAL=" >> $CONFIG_FILE
         echo "EXECUTOR_MAX_L3_GAS_PRICE=1500" >> $CONFIG_FILE
-        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,blast-sepolia'" >> $CONFIG_FILE
+        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia'" >> $CONFIG_FILE
+        echo "NETWORKS_DISABLED='blast-sepolia,unichain-sepolia,monad-testnet,arbitrum,base,optimism,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
     "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
