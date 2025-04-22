@@ -69,7 +69,7 @@ case $choice in
 
         # Создаем .t3rn и записываем приватный ключ
         CONFIG_FILE="$HOME_DIR/executor/executor/bin/.t3rn"
-        echo "ENVIRONMENT=testnet" > $CONFIG_FILE
+        echo "ENVIRONMENT=testnet" >> $CONFIG_FILE
         echo "EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false" > $CONFIG_FILE
         echo "EXECUTOR_PROCESS_ORDERS_API_ENABLED=false" > $CONFIG_FILE
         echo "EXECUTOR_PROCESS_BIDS_BATCH=true" > $CONFIG_FILE
@@ -162,7 +162,7 @@ EOT"
         
         # Создаем .t3rn и записываем приватный ключ
         CONFIG_FILE="$HOME_DIR/executor/executor/bin/.t3rn"
-        echo "ENVIRONMENT=testnet" > $CONFIG_FILE
+        echo "ENVIRONMENT=testnet" >> $CONFIG_FILE
         echo "EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false" > $CONFIG_FILE
         echo "EXECUTOR_PROCESS_ORDERS_API_ENABLED=false" > $CONFIG_FILE
         echo "EXECUTOR_PROCESS_BIDS_BATCH=true" > $CONFIG_FILE
