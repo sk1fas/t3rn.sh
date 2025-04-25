@@ -86,12 +86,12 @@ case $choice in
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
     "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
-    "arbt": ["https://arbitrum-sepolia-rpc.publicnode.com"],
+    "arbt": ["https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://sepolia.base.org"],
     "blst": ["https://blast-sepolia.blockpi.network/v1/rpc/public"],
     "mont": ["https://testnet-rpc.monad.xyz"],
-    "opst": ["https://optimism-sepolia-rpc.publicnode.com"],
-    "unit": ["https://unichain-sepolia.blockpi.network/v1/rpc/public"]
+    "opst": ["https://sepolia.optimism.io"],
+    "unit": ["https://sepolia.unichain.org"]
 }'
 EOF
         if ! grep -q "ENVIRONMENT=testnet" "$HOME/executor/executor/bin/.t3rn"; then
@@ -178,13 +178,13 @@ EOT"
         echo "NETWORKS_DISABLED='blast-sepolia,monad-testnet,arbitrum,base,optimism,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
-    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public"],
-    "arbt": ["https://arbitrum-sepolia-rpc.publicnode.com"],
+    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
+    "arbt": ["https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://sepolia.base.org"],
     "blst": ["https://blast-sepolia.blockpi.network/v1/rpc/public"],
     "mont": ["https://testnet-rpc.monad.xyz"],
-    "opst": ["https://optimism-sepolia-rpc.publicnode.com"],
-    "unit": ["https://unichain-sepolia.blockpi.network/v1/rpc/public"]
+    "opst": ["https://sepolia.optimism.io"],
+    "unit": ["https://sepolia.unichain.org"]
 }'
 EOF
 
