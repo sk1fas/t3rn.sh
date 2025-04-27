@@ -178,7 +178,7 @@ EOT"
         echo "NETWORKS_DISABLED='optimism-sepolia,blast-sepolia,monad-testnet,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
-    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
+    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public"],
     "arbt": ["https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://sepolia.base.org"],
     "blst": ["https://blast-sepolia.blockpi.network/v1/rpc/public"],
