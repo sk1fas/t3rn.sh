@@ -56,12 +56,12 @@ case $choice in
 
         # Скачиваем бинарник
         #LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
-        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.69.0/executor-linux-v0.69.0.tar.gz"
-        curl -L -o executor-linux-v0.69.0.tar.gz $EXECUTOR_URL
+        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.70.0/executor-linux-v0.70.0.tar.gz"
+        curl -L -o executor-linux-v0.70.0.tar.gz $EXECUTOR_URL
 
         # Извлекаем
-        tar -xzvf executor-linux-v0.69.0.tar.gz
-        rm -rf executor-linux-v0.69.0.tar.gz
+        tar -xzvf executor-linux-v0.70.0.tar.gz
+        rm -rf executor-linux-v0.70.0.tar.gz
 
         # Определяем пользователя и домашнюю директорию
         USERNAME=$(whoami)
@@ -70,10 +70,10 @@ case $choice in
         # Создаем .t3rn и записываем приватный ключ
         CONFIG_FILE="$HOME_DIR/executor/executor/bin/.t3rn"
         echo "ENVIRONMENT=testnet" >> $CONFIG_FILE
-        echo "EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false" > $CONFIG_FILE
-        echo "EXECUTOR_PROCESS_ORDERS_API_ENABLED=false" > $CONFIG_FILE
-        echo "EXECUTOR_PROCESS_BIDS_BATCH=true" > $CONFIG_FILE
-        echo "EXECUTOR_ENABLE_BATCH_BIDDING=true" > $CONFIG_FILE
+        echo "EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false" >> $CONFIG_FILE
+        echo "EXECUTOR_PROCESS_ORDERS_API_ENABLED=false" >> $CONFIG_FILE
+        echo "EXECUTOR_PROCESS_BIDS_BATCH=true" >> $CONFIG_FILE
+        echo "EXECUTOR_ENABLE_BATCH_BIDDING=true" >> $CONFIG_FILE
         echo "LOG_LEVEL=debug" >> $CONFIG_FILE
         echo "LOG_PRETTY=false" >> $CONFIG_FILE
         echo "EXECUTOR_PROCESS_BIDS_ENABLED=true" >> $CONFIG_FILE
@@ -81,11 +81,11 @@ case $choice in
         echo "EXECUTOR_PROCESS_CLAIMS=true" >> $CONFIG_FILE
         echo "PRIVATE_KEY_LOCAL=" >> $CONFIG_FILE
         echo "EXECUTOR_MAX_L3_GAS_PRICE=1000" >> $CONFIG_FILE
-        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn,unichain-sepolia'" >> $CONFIG_FILE
-        echo "NETWORKS_DISABLED='blast-sepolia,monad-testnet,arbitrum,base,optimism,sei-testnet'" >> $CONFIG_FILE
+        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,l2rn,unichain-sepolia'" >> $CONFIG_FILE
+        echo "NETWORKS_DISABLED='optimism-sepolia,blast-sepolia,monad-testnet,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
-    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
+    "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public"],
     "arbt": ["https://sepolia-rollup.arbitrum.io/rpc"],
     "bast": ["https://sepolia.base.org"],
     "blst": ["https://blast-sepolia.blockpi.network/v1/rpc/public"],
@@ -151,10 +151,10 @@ EOT"
 
         # Скачиваем новый бинарник
         #LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
-        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.69.0/executor-linux-v0.69.0.tar.gz"
-        curl -L -o executor-linux-v0.69.0.tar.gz $EXECUTOR_URL
-        tar -xzvf executor-linux-v0.69.0.tar.gz
-        rm -rf executor-linux-v0.69.0.tar.gz
+        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.70.0/executor-linux-v0.70.0.tar.gz"
+        curl -L -o executor-linux-v0.70.0.tar.gz $EXECUTOR_URL
+        tar -xzvf executor-linux-v0.70.0.tar.gz
+        rm -rf executor-linux-v0.70.0.tar.gz
 
         # Определяем пользователя и домашнюю директорию
         USERNAME=$(whoami)
@@ -163,10 +163,10 @@ EOT"
         # Создаем .t3rn и записываем приватный ключ
         CONFIG_FILE="$HOME_DIR/executor/executor/bin/.t3rn"
         echo "ENVIRONMENT=testnet" >> $CONFIG_FILE
-        echo "EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false" > $CONFIG_FILE
-        echo "EXECUTOR_PROCESS_ORDERS_API_ENABLED=false" > $CONFIG_FILE
-        echo "EXECUTOR_PROCESS_BIDS_BATCH=true" > $CONFIG_FILE
-        echo "EXECUTOR_ENABLE_BATCH_BIDDING=true" > $CONFIG_FILE
+        echo "EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false" >> $CONFIG_FILE
+        echo "EXECUTOR_PROCESS_ORDERS_API_ENABLED=false" >> $CONFIG_FILE
+        echo "EXECUTOR_PROCESS_BIDS_BATCH=true" >> $CONFIG_FILE
+        echo "EXECUTOR_ENABLE_BATCH_BIDDING=true" >> $CONFIG_FILE
         echo "LOG_LEVEL=debug" >> $CONFIG_FILE
         echo "LOG_PRETTY=false" >> $CONFIG_FILE
         echo "EXECUTOR_PROCESS_BIDS_ENABLED=true" >> $CONFIG_FILE
@@ -174,8 +174,8 @@ EOT"
         echo "EXECUTOR_PROCESS_CLAIMS=true" >> $CONFIG_FILE
         echo "PRIVATE_KEY_LOCAL=" >> $CONFIG_FILE
         echo "EXECUTOR_MAX_L3_GAS_PRICE=1000" >> $CONFIG_FILE
-        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,unichain-sepolia'" >> $CONFIG_FILE
-        echo "NETWORKS_DISABLED='blast-sepolia,monad-testnet,arbitrum,base,optimism,sei-testnet'" >> $CONFIG_FILE
+        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,l2rn,unichain-sepolia'" >> $CONFIG_FILE
+        echo "NETWORKS_DISABLED='optimism-sepolia,blast-sepolia,monad-testnet,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
     "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "https://b2n.rpc.caldera.xyz/http"],
@@ -245,6 +245,6 @@ EOF
         sleep 1
         ;;
     *)
-        echo -e "${RED}Неверный выбор. Пожалуйста, введите номер от 1 до 4.${NC}"
+        echo -e "${RED}Неверный выбор. Пожалуйста, введите номер от 1 до 5.${NC}"
         ;;
 esac
