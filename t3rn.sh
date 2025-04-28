@@ -81,7 +81,7 @@ case $choice in
         echo "EXECUTOR_PROCESS_CLAIMS=true" >> $CONFIG_FILE
         echo "PRIVATE_KEY_LOCAL=" >> $CONFIG_FILE
         echo "EXECUTOR_MAX_L3_GAS_PRICE=1000" >> $CONFIG_FILE
-        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,l2rn,unichain-sepolia'" >> $CONFIG_FILE
+        echo "ENABLED_NETWORKS='base-sepolia,unichain-sepolia,l2rn,arbitrum-sepolia'" >> $CONFIG_FILE
         echo "NETWORKS_DISABLED='optimism-sepolia,blast-sepolia,monad-testnet,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
@@ -174,7 +174,7 @@ EOT"
         echo "EXECUTOR_PROCESS_CLAIMS=true" >> $CONFIG_FILE
         echo "PRIVATE_KEY_LOCAL=" >> $CONFIG_FILE
         echo "EXECUTOR_MAX_L3_GAS_PRICE=1000" >> $CONFIG_FILE
-        echo "ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,l2rn,unichain-sepolia'" >> $CONFIG_FILE
+        echo "ENABLED_NETWORKS='base-sepolia,unichain-sepolia,l2rn,arbitrum-sepolia'" >> $CONFIG_FILE
         echo "NETWORKS_DISABLED='optimism-sepolia,blast-sepolia,monad-testnet,sei-testnet'" >> $CONFIG_FILE
         cat <<EOF >> $CONFIG_FILE
 RPC_ENDPOINTS='{
