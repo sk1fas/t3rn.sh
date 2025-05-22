@@ -83,7 +83,7 @@ case $choice in
         echo "EXECUTOR_MAX_L3_GAS_PRICE=1000" >> $CONFIG_FILE
         echo "ENABLED_NETWORKS='base-sepolia,unichain-sepolia,l2rn,arbitrum-sepolia'" >> $CONFIG_FILE
         echo "NETWORKS_DISABLED='optimism-sepolia,blast-sepolia,monad-testnet,sei-testnet'" >> $CONFIG_FILE
-        cat <<EOF >> $CONFIG_FILE
+        cat <<'EOF' >> $CONFIG_FILE
 RPC_ENDPOINTS='{
     "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public"],
     "arbt": ["https://sepolia-rollup.arbitrum.io/rpc"],
@@ -176,7 +176,7 @@ EOT"
         echo "EXECUTOR_MAX_L3_GAS_PRICE=1000" >> $CONFIG_FILE
         echo "ENABLED_NETWORKS='base-sepolia,unichain-sepolia,l2rn,arbitrum-sepolia'" >> $CONFIG_FILE
         echo "NETWORKS_DISABLED='optimism-sepolia,blast-sepolia,monad-testnet,sei-testnet'" >> $CONFIG_FILE
-        cat <<EOF >> $CONFIG_FILE
+        cat <<'EOF' >> $CONFIG_FILE
 RPC_ENDPOINTS='{
     "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public"],
     "arbt": ["https://sepolia-rollup.arbitrum.io/rpc"],
