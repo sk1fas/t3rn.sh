@@ -56,12 +56,12 @@ case $choice in
 
         # Скачиваем бинарник
         #LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
-        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.79.1/executor-linux-v0.79.1.tar.gz"
-        curl -L -o executor-linux-v0.79.1.tar.gz $EXECUTOR_URL
+        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.70.0/executor-linux-v0.70.0.tar.gz"
+        curl -L -o executor-linux-v0.70.0.tar.gz $EXECUTOR_URL
 
         # Извлекаем
-        tar -xzvf executor-linux-v0.79.1.tar.gz
-        rm -rf executor-linux-v0.79.1.tar.gz
+        tar -xzvf executor-linux-v0.70.0.tar.gz
+        rm -rf executor-linux-v0.70.0.tar.gz
 
         # Определяем пользователя и домашнюю директорию
         USERNAME=$(whoami)
@@ -151,10 +151,10 @@ EOT"
 
         # Скачиваем новый бинарник
         #LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
-        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.79.1/executor-linux-v0.79.1.tar.gz"
-        curl -L -o executor-linux-v0.79.1.tar.gz $EXECUTOR_URL
-        tar -xzvf executor-linux-v0.79.1.tar.gz
-        rm -rf executor-linux-v0.79.1.tar.gz
+        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.70.0/executor-linux-v0.70.0.tar.gz"
+        curl -L -o executor-linux-v0.70.0.tar.gz $EXECUTOR_URL
+        tar -xzvf executor-linux-v0.70.0.tar.gz
+        rm -rf executor-linux-v0.70.0.tar.gz
 
         # Определяем пользователя и домашнюю директорию
         USERNAME=$(whoami)
