@@ -151,7 +151,7 @@ EOT"
 
         # Скачиваем новый бинарник
         #LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
-        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.81.0/executor-linux-v0.81.0.tar.gz
+        EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.81.0/executor-linux-v0.81.0.tar.gz"
         curl -L -o executor-linux-v0.81.0.tar.gz $EXECUTOR_URL
         tar -xzvf executor-linux-v0.81.0.tar.gz
         rm -rf executor-linux-v0.81.0.tar.gz
